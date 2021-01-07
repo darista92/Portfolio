@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Nov  8 14:24:55 2020
+El script permite calcular el coste mensual aproximado (en €) de la gasolina utilizada durante un mes. Mediante una interfaz es posible introducir manualmente 
+los kilómetros recorridos al día y el consumo del coche marcado por el fabricante para realizar el cálculo
 
-@author: arist
+
 """
 
 
@@ -22,12 +23,6 @@ root= Tk()
     return round ((km_mes*eur_1_km),2)'''
 
 #tkinter
-
-
-    
-    
-
-
 
 #------propiedades generales----------
 fuente_text =("Verdana", 20)
@@ -67,8 +62,6 @@ def gasolina_tkinter(precio_gas =1.151):
     eur_1_km = (consumo/100)*precio_gas
     eur_mes = round((km_mes*eur_1_km),2)
     messagebox.showinfo("Resultado", f"El gasto mensual en gasolina para este coche es de: {eur_mes}"+"€")
-
-
 
 #botón
 calcular = Button(root, text="Calcular", font=fuente_num, width=15, bd=6
